@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/index.html</loc><priority>1.0</priority></url>
-  <url><loc>https://example.com/cars.html</loc><priority>0.9</priority></url>
-  <url><loc>https://example.com/auth.html</loc><priority>0.8</priority></url>
-  <url><loc>https://example.com/login.html</loc><priority>0.5</priority></url>
-  <url><loc>https://example.com/register.html</loc><priority>0.5</priority></url>
+  <url><loc>https://k-rides-jerry.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://k-rides-jerry.vercel.app/cars.html</loc><priority>0.9</priority></url>
+  <url><loc>https://k-rides-jerry.vercel.app/auth.html</loc><priority>0.8</priority></url>
+  <url><loc>https://k-rides-jerry.vercel.app/login.html</loc><priority>0.5</priority></url>
+  <url><loc>https://k-rides-jerry.vercel.app/register.html</loc><priority>0.5</priority></url>
 </urlset>
