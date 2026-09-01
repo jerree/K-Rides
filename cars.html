@@ -1,0 +1,2326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Browse K-Rides collection of 36+ premium vehicles from Toyota, Honda, BMW, Mercedes, Lexus and more. Filter by brand, price, fuel and transmission.">
+	<meta property="og:title" content="K-Rides | Browse Cars">
+	<meta property="og:description" content="Browse 36+ premium vehicles from Toyota, Honda, BMW, Mercedes, Lexus and more. Filter by brand, price, fuel and transmission.">
+	<meta property="og:image" content="assets/k-ride-logo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>K-Rides | Browse Cars</title>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+	<link rel="apple-touch-icon" href="assets/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="style.css?v=31">
+</head>
+<body>
+	<!-- =========================================================
+     HEADER / NAVBAR
+     ========================================================= -->
+<header>
+		<div class="container">
+			<nav class="navbar">
+				<div class="logo">
+                    <img src="assets/k-ride-logo.png" alt="K-Ride Logo">
+					<a href="index.html">-Rides</a>
+				</div>
+
+				<div class="nav-drawer" id="navDrawer">
+					<ul class="nav-links">
+						<li><a href="index.html" class="nav-item">Home</a></li>
+						<li><a href="index.html#about" class="nav-item">About</a></li>
+						<li><a href="#contact" class="nav-item">Contact</a></li>
+
+						<span class="indicator"></span>
+					</ul>
+
+					<div class="nav-buttons">
+						<a href="cars.html" class="btn btn-cars active">Cars</a>
+						<a href="auth.html" class="btn btn-register">Sign In</a>
+					</div>
+				</div>
+
+				<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+					<span></span><span></span><span></span>
+				</button>
+
+			</nav>
+			<div class="drawer-overlay" id="drawerOverlay"></div>
+		</div>
+	</header>
+
+    <!-- =========================================================
+     CARS HERO
+     ========================================================= -->
+<section class="cars-hero" id="cars">
+        <div class="container">
+            <h1>Browse Our Collection</h1>
+            <p>
+                Explore our premium selection of quality vehicles
+                from trusted brands.
+            </p>
+        </div>
+    </section>
+
+    <!-- =========================================================
+     FILTER BAR
+     ========================================================= -->
+<section class="car-filters">
+        <div class="container">
+            <div class="filter-bar">
+
+                <input type="text"
+                    id="search"
+                    placeholder="Search cars...">
+
+                <select id="brand">
+                    <option value="">Brand</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Range-Rover">Range Rover</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="KIA">KIA</option>
+                </select>
+
+                <select id="price">
+                    <option value="">Price</option>
+                    <option value="20000000">Under ₦20M</option>
+                    <option value="20000000-40000000">₦20M - ₦40M</option>
+                    <option value="40000000-60000000">₦40M - ₦60M</option>
+                    <option value="40000000">Under ₦40M</option>
+                    <option value="60000000">Under ₦60M</option>
+                    <option value="60000000+">Over ₦60M</option>
+                </select>
+
+                <select id="fuel">
+                    <option value="">Fuel</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Electric">Electric</option>
+                </select>
+
+                <select id="transmission">
+                    <option value="">Transmission</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
+                </select>
+
+                <select id="sort">
+                    <option value="">Sort By</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="new">Newest First</option>
+                    <option value="old">Oldest First</option>
+                </select>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+     CARS LIST & GRID
+     ========================================================= -->
+<section class="cars-list">
+        <div class="container">
+            <div class="results-bar"><p id="resultsCount">Showing 36 cars</p></div>
+            <div class="cars-car-grid">
+                <!-- Car Cards Go Here -->
+                <div class="car-card"
+                    data-brand="Toyota"
+                    data-model="Toyota Camry"
+                    data-price="8500000"
+                    data-fuel="Petrol"
+                    data-transmission="Manual"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/toyota.webp" alt="Toyota Camry" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Toyota Camry</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Manual
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦8,500,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Mercedes"
+                    data-model="Mercedes C-Class"
+                    data-price="27000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/mercedes.webp" alt="Mercedes C-Class" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Mercedes C-Class</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦27,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Honda"
+                    data-model="Honda Civic"
+                    data-price="22500000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2023"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Honda.webp" alt="Honda Civic" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Honda Civic</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2023
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦22,500,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="BMW"
+                    data-model="BMW 5series"
+                    data-price="22000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Bmw.webp" alt="BMW 5series" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Bmw 5series</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦22,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Range-Rover"
+                    data-model="Range-Rover Sport"
+                    data-price="40000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/range-rover.webp" alt="Range-Rover Sport" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Range-Rover Sport</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦40,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Peugeot"
+                    data-model="Peugeot 508"
+                    data-price="18000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2016"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/peugout.webp" alt="Peugeot 508" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Peugeot 508</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2016
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦18,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Ford"
+                    data-model="Ford Ranger"
+                    data-price="18000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Ford.webp" alt="Ford Ranger" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Ford Ranger</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦18,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Lexus"
+                    data-model="Lexus ES350"
+                    data-price="19500000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2022"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/lexus.webp" alt="Lexus ES350" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Lexus ES350</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2022
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦19,500,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Hyundai"
+                    data-model="Hyundai Santa Fe"
+                    data-price="21500000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2017"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Hyundai.webp" alt="Hyundai Santa Fe" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Hyundai Santa Fe</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2017
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦21,500,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Nissan"
+                    data-model="Nissan Patrol"
+                    data-price="16000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/nissan.webp" alt="Nissan Patrol" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Nissan Patrol</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦16,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="KIA"
+                    data-model="KIA Rio"
+                    data-price="18000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Kia.webp" alt="KIA Rio" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>KIA Rio</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦18,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Audi"
+                    data-model="Audi A4"
+                    data-price="38000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2017"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/audi.webp" alt="Audi A4" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Audi A4</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2017
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦38,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Honda"
+                    data-model="Honda Accord"
+                    data-price="23000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Honda-accord.webp" alt="Honda Accord" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Honda Accord</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦23,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Lexus"
+                    data-model="Lexus LX570"
+                    data-price="28000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Lexus-LX570.webp" alt="Lexus LX570" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Lexus LX570</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦28,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Audi"
+                    data-model="Audi Q7"
+                    data-price="40000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2021"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Audi-Q7.webp" alt="Audi Q7" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Audi Q7</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2021
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦40,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Hyundai"
+                    data-model="Hyundai Elantra"
+                    data-price="32000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Hyundai-Elantra.webp" alt="Hyundai Elantra" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Hyundai Elantra</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦32,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Nissan"
+                    data-model="Nissan X-Trail"
+                    data-price="21000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Nissan-XTrail.webp" alt="Nissan X-Trail" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Nissan X-Trail</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦21,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Mercedes"
+                    data-model="Mercedes GLE350"
+                    data-price="30000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2021"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Mercedes-GLE350.webp" alt="Mercedes GLE350" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Mercedes GLE350</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2021
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦30,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="KIA"
+                    data-model="KIA Sorento"
+                    data-price="34000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2017"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Kia-sorento.webp" alt="KIA Sorento" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>KIA Sorento</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2017
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦34,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Peugeot"
+                    data-model="Peugeot 3008"
+                    data-price="22000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2016"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Peugeot-3008.webp" alt="Peugeot 3008" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Peugeot 3008</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2016
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦22,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Toyota"
+                    data-model="Toyota Corolla"
+                    data-price="17000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Toyota-corolla.webp" alt="Toyota Corolla" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Toyota Corolla</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦17,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Range-Rover"
+                    data-model="Range-Rover Velar"
+                    data-price="72000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Range-rover-velar.webp" alt="Range-Rover Velar" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Range-Rover Velar</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦72,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Ford"
+                    data-model="Ford Focus"
+                    data-price="52000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2023"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Ford-Focus.webp" alt="Ford Focus" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Ford Focus</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2023
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦52,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="BMW"
+                    data-model="BMW X5"
+                    data-price="41000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/BMW-X5.webp" alt="BMW X5" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>BMW X5</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦41,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Range-Rover"
+                    data-model="Range-Rover Evoque"
+                    data-price="48000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2017"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Range-rover-evoque.webp" alt="Range-Rover Evoque" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Range-Rover Evoque</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2017
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦48,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Honda"
+                    data-model="Honda CR-V"
+                    data-price="65000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Honda-SUV-cr-v.webp" alt="Honda CR-V" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Honda CR-V</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦65,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="BMW"
+                    data-model="BMW 3series"
+                    data-price="38000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2016"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/BMW-3series.webp" alt="BMW 3series" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>BMW 3series</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2016
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦38,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Peugeot"
+                    data-model="Peugeot 208"
+                    data-price="27000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Peugeot-208.webp" alt="Peugeot 208" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Peugeot 208</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦27,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Mercedes"
+                    data-model="Mercedes Eclass"
+                    data-price="42000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Mercedes-Eclass.webp" alt="Mercedes Eclass" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Mercedes Eclass</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦42,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Lexus"
+                    data-model="Lexus RX350"
+                    data-price="45000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Lexus-RX350.webp" alt="Lexus RX350" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Lexus RX350</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦45,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Nissan"
+                    data-model="Nissan Altima"
+                    data-price="50000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2020"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Nissan-Altima.webp" alt="Nissan Altima" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Nissan Altima</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2020
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦50,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="KIA"
+                    data-model="KIA Sportage"
+                    data-price="55000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Kia-sportage.webp" alt="KIA Sportage" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>KIA Sportage</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦55,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Toyota"
+                    data-model="Toyota RAV4"
+                    data-price="42000000"
+                    data-fuel="Diesel"
+                    data-transmission="Automatic"
+                    data-year="2017"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Toyota-RAV4.webp" alt="Toyota RAV4" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Toyota RAV4</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2017
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Diesel
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦42,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Ford"
+                    data-model="Ford Explorer"
+                    data-price="48000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2018"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Ford-Explorer.webp" alt="Ford Explorer" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Ford Explorer</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2018
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦48,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Hyundai"
+                    data-model="Hyundai Tucson"
+                    data-price="52000000"
+                    data-fuel="Electric"
+                    data-transmission="Automatic"
+                    data-year="2022"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Hyundai-Tucson.webp" alt="Hyundai Tucson" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Hyundai Tucson</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2022
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Electric
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦52,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="car-card"
+                    data-brand="Audi"
+                    data-model="Audi A6"
+                    data-price="44000000"
+                    data-fuel="Petrol"
+                    data-transmission="Automatic"
+                    data-year="2019"
+                    data-rating="4.8"
+                    data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+                    <div class="car-image">
+                        <img src="assets/Audi-A6.webp" alt="Audi A6" loading="lazy">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="car-info">
+                        <h3>Audi A6</h3>
+                        <div class="car-specs">
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                2019
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gears"></i>
+                                Automatic
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-gas-pump"></i>
+                                Petrol
+                            </span>
+                        </div>
+
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+
+                        <div class="car-price">
+                            ₦44,000,000
+                        </div>
+
+                        <a href="#" class="btn card-details">
+                            View Details 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p id="no-results">
+                No cars match your search.
+            </p>
+
+            <!-- =========================================================
+     PAGINATION
+     ========================================================= -->
+<div class="pagination" id="pagination">
+                <button class="page-btn" id="prevPage">
+                    <i class="fa-solid fa-angle-left"></i>
+                    Previous
+                </button>
+                <span id="pageNumbers"></span>
+                <button class="page-btn" id="nextPage">
+                    Next
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+     CAR DETAILS MODAL
+     ========================================================= -->
+<div class="car-modal" id="carModal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close car details">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-rating">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span id="modalRating"></span>
+                </div>
+                <p class="modal-price" id="modalPrice"></p>
+                <div class="modal-specs">
+                    <div class="spec-card">
+                        <i class="fa-regular fa-calendar"></i>
+                        <h4>Year</h4>
+                        <span id="modalYear"></span>
+                    </div>
+
+                    <div class="spec-card">
+                        <i class="fa-solid fa-gears"></i>
+                        <h4>Transmission</h4>
+                        <span id="modalTransmission"></span>
+                    </div>
+
+                    <div class="spec-card">
+                        <i class="fa-solid fa-gas-pump"></i>
+                        <h4>Fuel</h4>
+                        <span id="modalFuel"></span>
+                    </div>
+                </div>
+                <p id="modalDescription"></p>
+                <button class="btn ride-btn" id="contactSellerBtn">
+                    Contact Seller
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+     CONTACT SELLER MODAL
+     ========================================================= -->
+<div class="contact-modal" id="contactModal">
+        <div class="contact-content">
+            <button class="close-contact" aria-label="Close contact form">&times;</button>
+            <h2>Contact Seller</h2>
+            <p id="contactCarName"></p>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="buyerName">Full Name</label>
+                    <input type="text" id="buyerName" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="buyerEmail">Email Address</label>
+                    <input type="email" id="buyerEmail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="buyerPhone">Phone Number</label>
+                    <input type="tel" id="buyerPhone" pattern="^\+?[0-9\s\-]{10,15}$" placeholder="+234 800 123 4567" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="buyerMessage">Message</label>
+                    <textarea
+                        id="buyerMessage"
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    Send Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+	<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="footer" id="contact">
+		<div class="container">
+			<div class="footer-content">
+				<!-- Column 1 -->
+				<div class="footer-column">
+					<h2>K-Rides</h2>
+					<p>
+						Find your dream car with confidence.
+						Premium vehicles, trusted service,
+						and unbeatable prices.
+					</p>
+				</div>
+		
+				<!-- Column 2 -->
+				<div class="footer-column">
+
+					<h3>Quick Links</h3>
+
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="cars.html">Cars</a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 3 -->
+				<div class="footer-column">
+					<h3>Contact</h3>
+					<p>
+						<i class="fa-solid fa-location-dot"></i>
+						Lagos, Nigeria
+					</p>
+
+					<p>
+						<i class="fa-solid fa-phone"></i>
+						+234 800 123 4567
+					</p>
+
+					<p>
+						<i class="fa-solid fa-envelope"></i>
+						info@krides.com
+					</p>
+				</div>
+
+				<!-- Column 4 -->
+				<div class="footer-column">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-column">
+					<h3>Newsletter</h3>
+					<p>
+						Subscribe to receive updates on new arrivals and exclusive offers.
+					</p>
+
+					<form class="footer-newsletter">
+						<input
+							type="email"
+							placeholder="Your email"
+							required
+						>
+						<button type="submit">
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>
+					© 2026 K-Rides. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+    <!-- =========================================================
+     BACK TO TOP
+     ========================================================= -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+<script src="carsjs.js"></script> 
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="K-Rides - Find your dream car with confidence. Premium vehicles, trusted dealers, competitive prices in Lagos, Nigeria. Browse 30+ verified cars.">
+	<meta property="og:title" content="K-Rides | Find Your Dream Car">
+	<meta property="og:description" content="Premium vehicles, trusted dealers, competitive prices in Lagos. Browse 30+ verified cars.">
+	<meta property="og:image" content="assets/k-ride-logo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>K-Rides | Find Your Dream Car</title>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+	<link rel="apple-touch-icon" href="assets/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="style.css?v=31">
+</head>
+<body>
+	<!-- =========================================================
+     HEADER / NAVBAR
+     ========================================================= -->
+<header>
+		<div class="container">
+			<nav class="navbar">
+
+				<div class="logo">
+					<img src="assets/k-ride-logo.png" alt="K-Ride Logo">
+					<a href="index.html">-Rides</a>
+				</div>
+
+				<div class="nav-drawer" id="navDrawer">
+					<ul class="nav-links">
+						<li><a href="#home" class="nav-item active">Home</a></li>
+						<li><a href="#about" class="nav-item">About</a></li>
+						<li><a href="#contact" class="nav-item">Contact</a></li>
+
+						<span class="indicator"></span>
+					</ul>
+
+					<div class="nav-buttons">
+						<a href="cars.html" class="btn btn-cars">Cars</a>
+						<a href="auth.html" class="btn btn-register">Sign In</a>
+					</div>
+				</div>
+
+				<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+					<span></span><span></span><span></span>
+				</button>
+
+			</nav>
+			<div class="drawer-overlay" id="drawerOverlay"></div>
+		</div>
+	</header>
+
+	<!-- =========================================================
+     HERO SECTION
+     ========================================================= -->
+<section class="hero" id="home">
+    	<div class="overlay"></div>
+    	<div class="container">
+			<div class="hero-text">
+				<h1>Find Your Dream Car Today</h1>
+				<p>
+					Premium SUVs, sports and family cars at unbeatable prices.
+				</p>
+
+				<a href="cars.html" class="btn btn-primary">
+					Browse Inventory
+				</a>
+			</div>
+    	</div>
+	</section>
+
+	<!-- =========================================================
+     FEATURED CARS
+     ========================================================= -->
+<section class="featured-cars">
+		<div class="container">
+			<div class="section-title">
+				<h2>Featured Cars</h2>
+				<p>
+					Browse our collection of premium vehicles.
+				</p>
+			</div>
+
+			<div class="car-grid">
+				<div class="car-card"
+					data-brand="Mercedes"
+					data-model="Mercedes C-Class"
+					data-price="27000000"
+					data-fuel="Petrol"
+					data-transmission="Automatic"
+					data-year="2020"
+					data-rating="4.8"
+					data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
+					<img src="assets/mercedes.webp" alt="Mercedes C-Class" loading="lazy">
+					<div class="car-info">
+						<h3>Mercedes C-Class</h3>
+						<p>₦27,000,000</p>
+						<a href="#" class="btn btn-primary card-details">
+							View Details
+						</a>
+					</div>
+				</div>
+
+				<div class="car-card"
+					data-brand="Honda"
+					data-model="Honda Civic"
+					data-price="22500000"
+					data-fuel="Petrol"
+					data-transmission="Automatic"
+					data-year="2023"
+					data-rating="4.8"
+					data-description="Reliable and efficient sedan with modern tech, smooth handling, and excellent fuel economy.">
+					<img src="assets/Honda.webp" alt="Honda Civic" loading="lazy">
+					<div class="car-info">
+						<h3>Honda Civic</h3>
+						<p>₦22,500,000</p>
+						<a href="#" class="btn btn-primary card-details">
+							View Details
+						</a>
+					</div>
+				</div>
+
+				<div class="car-card"
+					data-brand="BMW"
+					data-model="BMW 5Series"
+					data-price="22000000"
+					data-fuel="Petrol"
+					data-transmission="Automatic"
+					data-year="2019"
+					data-rating="4.8"
+					data-description="Executive sedan blending performance and luxury with advanced driving dynamics and premium comfort.">
+					<img src="assets/Bmw.webp" alt="BMW 5Series" loading="lazy">
+					<div class="car-info">
+						<h3>BMW 5Series</h3>
+						<p>₦22,000,000</p>
+						<a href="#" class="btn btn-primary card-details">
+							View Details
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="view-all">
+				<a href="cars.html" class="btn btn-primary">
+					View All Cars
+				</a>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- =========================================================
+     WHY CHOOSE US
+     ========================================================= -->
+<section class="why-choose">
+		<div class="container">
+			<div class="section-title">
+				<h2>Why Choose K-Rides?</h2>
+				<p>Your trusted destination for premium vehicles.</p>
+			</div>
+
+			<div class="features">
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="fa-solid fa-circle-check"></i>
+					</div>
+					<h3>Premium Cars</h3>
+					<p>
+						We offer carefully inspected vehicles from trusted brands.
+					</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="fa-solid fa-tags"></i>
+					</div>
+					<h3>Affordable Prices</h3>
+					<p>
+						Get competitive prices with flexible payment options.
+					</p>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-icon">
+						<i class="fa-solid fa-shield-halved"></i>
+					</div>
+					<h3>Trusted & Secure</h3>
+					<p>
+						Buy confidently with verified listings and secure transactions.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- =========================================================
+     ABOUT SECTION
+     ========================================================= -->
+<section class="about" id="about">
+		<div class="container">
+			<div class="about-content">
+				<!-- Left Side -->
+				<div class="about-image">
+					<img src="assets/main-image.webp" alt="About K-Rides showroom with premium vehicles" class="main-image" loading="lazy">
+					<img src="assets/small-image.webp" alt="Car showroom interior" class="small-image" loading="lazy">
+				</div>
+
+				<!-- Right Side -->
+				<div class="about-text">
+					<span class="section-tag">ABOUT K-RIDES</span>
+					<h2>Driven by Trust. Powered by Quality.</h2>
+					<p>
+						K-Rides is committed to making buying and selling
+						vehicles simple, secure, and transparent. We connect
+						customers with quality cars from trusted dealers,
+						ensuring every journey begins with confidence.
+					</p>
+
+					<!-- Vision & Mission -->
+					<div class="about-boxes">
+						<div class="about-box">
+							<i class="fa-solid fa-eye"></i>
+							<h3>Our Vision</h3>
+							<p>
+								To become the most trusted online marketplace
+								for buying and selling quality vehicles through
+								transparency, innovation, and exceptional service.
+							</p>
+						</div>
+
+						<div class="about-box">
+							<i class="fa-solid fa-bullseye"></i>
+							<h3>Our Mission</h3>
+							<p>
+								To provide customers with a seamless car-buying
+								experience by offering verified vehicles,
+								competitive pricing, and trusted support.
+							</p>
+						</div>
+					</div>
+
+					<a href="cars.html" class="btn btn-primary">
+						Browse Vehicles
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- =========================================================
+     TESTIMONIALS
+     ========================================================= -->
+<section class="testimonials">
+		<div class="container">
+			<div class="section-title">
+				<h2>What Our Customers Say</h2>
+				<p>
+					Hear from customers who found their perfect vehicle with K-Rides.
+				</p>
+			</div>
+
+			<div class="testimonial-grid">
+				<!-- Card 1 -->
+				<div class="testimonial-card">
+					<div class="customer-image">
+						<img src="assets/Hassan.webp" alt="Hassan Mubarak">
+					</div>
+
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+
+					<p class="review">
+						"Excellent customer service and quality vehicles.
+						Buying my Toyota Camry was stress-free."
+					</p>
+					<h4>Hassan Mubarak</h4>
+					<span>Toyota Camry Owner</span>
+
+				</div>
+
+				<!-- Card 2 -->
+				<div class="testimonial-card">
+					<div class="customer-image">
+						<img src="assets/Aisha.webp" alt="Aisha Ahmad">
+					</div>
+
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+
+					<p class="review">
+						"Amazing prices and friendly staff.
+						I found my dream BMW in just one visit."
+					</p>
+					<h4>Aisha Ahmad</h4>
+					<span>BMW X5 Owner</span>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="testimonial-card">
+
+					<div class="customer-image">
+						<img src="assets/David.webp" alt="David Olatunde">
+					</div>
+
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+
+					<p class="review">
+						"Professional service from start to finish.
+						Highly recommend K-Rides to anyone."
+					</p>
+					<h4>David Olatunde</h4>
+					<span>Mercedes C300 Owner</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- =========================================================
+     CTA SECTION
+     ========================================================= -->
+<section class="cta">
+		<div class="container">
+			<div class="cta-content">
+				<h2>Ready to Find Your Next Car?</h2>
+
+				<p>
+					Browse hundreds of verified vehicles from trusted brands.
+					Your perfect ride is just a few clicks away.
+				</p>
+
+				<a href="cars.html" class="btn btn-primary">
+					Browse All Vehicles
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="footer" id="contact">
+		<div class="container">
+			<div class="footer-content">
+				<!-- Column 1 -->
+				<div class="footer-column">
+					<h2>K-Rides</h2>
+					<p>
+						Find your dream car with confidence.
+						Premium vehicles, trusted service,
+						and unbeatable prices.
+					</p>
+				</div>
+		
+				<!-- Column 2 -->
+				<div class="footer-column">
+
+					<h3>Quick Links</h3>
+
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="cars.html">Cars</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 3 -->
+				<div class="footer-column">
+					<h3>Contact</h3>
+					<p>
+						<i class="fa-solid fa-location-dot"></i>
+						Lagos, Nigeria
+					</p>
+
+					<p>
+						<i class="fa-solid fa-phone"></i>
+						+234 800 123 4567
+					</p>
+
+					<p>
+						<i class="fa-solid fa-envelope"></i>
+						info@krides.com
+					</p>
+				</div>
+
+				<!-- Column 4 -->
+				<div class="footer-column">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+				<div class="footer-column">
+					<h3>Newsletter</h3>
+					<p>
+						Subscribe to receive updates on new arrivals and exclusive offers.
+					</p>
+
+					<form class="footer-newsletter">
+						<input
+							type="email"
+							placeholder="Your email"
+							required
+						>
+						<button type="submit">
+							Subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>
+					© 2026 K-Rides. All Rights Reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- =========================================================
+     CAR DETAILS MODAL
+     ========================================================= -->
+<div class="car-modal" id="carModal">
+		<div class="modal-content">
+			<button class="close-modal" aria-label="Close car details">&times;</button>
+			<img id="modalImage" src="" alt="">
+			<div class="modal-info">
+				<h2 id="modalTitle"></h2>
+				<div class="modal-rating">
+					<div class="stars">
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+					</div>
+					<span id="modalRating"></span>
+				</div>
+				<p class="modal-price" id="modalPrice"></p>
+				<div class="modal-specs">
+					<div class="spec-card">
+						<i class="fa-regular fa-calendar"></i>
+						<h4>Year</h4>
+						<span id="modalYear"></span>
+					</div>
+					<div class="spec-card">
+						<i class="fa-solid fa-gears"></i>
+						<h4>Transmission</h4>
+						<span id="modalTransmission"></span>
+					</div>
+					<div class="spec-card">
+						<i class="fa-solid fa-gas-pump"></i>
+						<h4>Fuel</h4>
+						<span id="modalFuel"></span>
+					</div>
+				</div>
+				<p id="modalDescription"></p>
+				<button class="btn btn-primary" id="contactSellerBtn" style="width:100%; text-align:center;">
+					Contact Seller
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- =========================================================
+     CONTACT SELLER MODAL
+     ========================================================= -->
+<div class="contact-modal" id="contactModal">
+		<div class="contact-content">
+			<button class="close-contact" aria-label="Close contact form">&times;</button>
+			<h2>Contact Seller</h2>
+			<p id="contactCarName"></p>
+			<form id="contactForm">
+				<div class="input-group">
+					<label for="buyerName">Full Name</label>
+					<input type="text" id="buyerName" required>
+				</div>
+				<div class="input-group">
+					<label for="buyerEmail">Email Address</label>
+					<input type="email" id="buyerEmail" required>
+				</div>
+				<div class="input-group">
+					<label for="buyerPhone">Phone Number</label>
+					<input type="tel" id="buyerPhone" pattern="^\+?[0-9\s\-]{10,15}$" placeholder="+234 800 123 4567" required>
+				</div>
+				<div class="input-group">
+					<label for="buyerMessage">Message</label>
+					<textarea id="buyerMessage" rows="5"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">
+					Send Request
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- =========================================================
+     BACK TO TOP
+     ========================================================= -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+		<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+	</button>
+	<!-- =========================================================
+     SCRIPTS
+     ========================================================= -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Create a K-Rides account — join thousands of buyers finding premium vehicles in Lagos.">
+	<meta property="og:title" content="K-Rides | Register">
+	<meta property="og:description" content="Create your K-Rides account and start browsing verified cars.">
+	<meta property="og:image" content="assets/k-ride-logo.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>K-Rides | Register</title>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+	<link rel="apple-touch-icon" href="assets/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+	<link rel="stylesheet" href="style.css?v=31">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar">
+				<div class="logo">
+					<img src="assets/k-ride-logo.png" alt="K-Ride Logo">
+					<a href="index.html">-Rides</a>
+				</div>
+				<div class="nav-drawer" id="navDrawer">
+					<ul class="nav-links">
+						<li><a href="index.html" class="nav-item">Home</a></li>
+						<li><a href="index.html#about" class="nav-item">About</a></li>
+						<li><a href="#contact" class="nav-item">Contact</a></li>
+						<span class="indicator"></span>
+					</ul>
+					<div class="nav-buttons">
+						<a href="cars.html" class="btn btn-cars">Cars</a>
+						<a href="auth.html" class="btn btn-register">Sign In</a>
+					</div>
+				</div>
+				<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+					<span></span><span></span><span></span>
+				</button>
+			</nav>
+			<div class="drawer-overlay" id="drawerOverlay"></div>
+		</div>
+	</header>
+
+	<!-- =========================================================
+     AUTH PAGE
+     ========================================================= -->
+	<section class="auth-page">
+		<div class="container">
+			<div class="auth-card">
+				<div class="auth-header">
+					<h1>Create Account</h1>
+					<p>Join K-Rides and find your dream car</p>
+				</div>
+				<form id="registerForm" novalidate>
+					<div class="input-group">
+						<label for="regName">Full Name</label>
+						<div class="input-with-icon">
+							<i class="fa-regular fa-user"></i>
+							<input type="text" id="regName" placeholder="John Doe" required>
+						</div>
+						<small class="field-error" id="regNameError"></small>
+					</div>
+					<div class="input-group">
+						<label for="regEmail">Email Address</label>
+						<div class="input-with-icon">
+							<i class="fa-regular fa-envelope"></i>
+							<input type="email" id="regEmail" placeholder="you@example.com" required>
+						</div>
+						<small class="field-error" id="regEmailError"></small>
+					</div>
+					<div class="input-group">
+						<label for="regPhone">Phone Number</label>
+						<div class="input-with-icon">
+							<i class="fa-solid fa-phone"></i>
+							<input type="tel" id="regPhone" placeholder="+234 800 123 4567" pattern="^\+?[0-9\s\-]{10,15}$" required>
+						</div>
+						<small class="field-error" id="regPhoneError"></small>
+					</div>
+					<div class="input-group">
+						<label for="regPass">Password</label>
+						<div class="input-with-icon">
+							<i class="fa-solid fa-lock"></i>
+							<input type="password" id="regPass" placeholder="At least 6 characters" required>
+							<button type="button" class="toggle-pass" data-target="regPass" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+						</div>
+						<small class="field-error" id="regPassError"></small>
+					</div>
+					<div class="input-group">
+						<label for="regConfirm">Confirm Password</label>
+						<div class="input-with-icon">
+							<i class="fa-solid fa-lock"></i>
+							<input type="password" id="regConfirm" placeholder="Repeat password" required>
+							<button type="button" class="toggle-pass" data-target="regConfirm" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+						</div>
+						<small class="field-error" id="regConfirmError"></small>
+					</div>
+					<label class="remember agree-label"><input type="checkbox" id="agree" required> I agree to the <a href="#">Terms & Privacy</a></label>
+					<small class="field-error" id="agreeError"></small>
+					<button type="submit" class="btn btn-primary auth-submit" id="regBtn">Create Account</button>
+					<div class="auth-divider"><span>or</span></div>
+					<p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+	<footer class="footer" id="contact">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-column">
+					<h2>K-Rides</h2>
+					<p>Find your dream car with confidence. Premium vehicles, trusted service, and unbeatable prices.</p>
+				</div>
+				<div class="footer-column">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="cars.html">Cars</a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h3>Contact</h3>
+					<p><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</p>
+					<p><i class="fa-solid fa-phone"></i> +234 800 123 4567</p>
+					<p><i class="fa-solid fa-envelope"></i> info@krides.com</p>
+				</div>
+				<div class="footer-column">
+					<h3>Follow Us</h3>
+					<div class="social-icons">
+						<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+						<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+					</div>
+				</div>
+				<div class="footer-column">
+					<h3>Newsletter</h3>
+					<p>Subscribe to receive updates on new arrivals and exclusive offers.</p>
+					<form class="footer-newsletter">
+						<input type="email" placeholder="Your email" required>
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+			<div class="footer-bottom"><p>© 2026 K-Rides. All Rights Reserved.</p></div>
+		</div>
+	</footer>
+
+	<button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+	<script src="script.js"></script>
+	<!-- =========================================================
+     AUTH SCRIPT - INLINE
+     ========================================================= -->
+	<script>
+	(function(){
+		const form = document.getElementById('registerForm');
+		const name = document.getElementById('regName');
+		const email = document.getElementById('regEmail');
+		const phone = document.getElementById('regPhone');
+		const pass = document.getElementById('regPass');
+		const confirm = document.getElementById('regConfirm');
+		const agree = document.getElementById('agree');
+		const btn = document.getElementById('regBtn');
+		document.querySelectorAll('.toggle-pass').forEach(t=>{
+			t.addEventListener('click', ()=>{
+				const id=t.dataset.target;
+				const inp=document.getElementById(id);
+				const isPass=inp.type==='password';
+				inp.type=isPass?'text':'password';
+				t.innerHTML=isPass?'<i class="fa-regular fa-eye-slash"></i>':'<i class="fa-regular fa-eye"></i>';
+			});
+		});
+		if(!form) return;
+		form.addEventListener('submit', (e)=>{
+			e.preventDefault();
+			let ok=true;
+			[['regNameError', name.value.trim().length>=2],[ 'regEmailError', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)],[ 'regPhoneError', /^\+?[0-9\s\-]{10,15}$/.test(phone.value)],[ 'regPassError', pass.value.length>=6],[ 'regConfirmError', confirm.value===pass.value && confirm.value.length>0]].forEach(([id,cond])=>{
+				const el=document.getElementById(id);
+				if(!cond){ el.textContent=id.includes('Name')?'Enter full name': id.includes('Email')?'Valid email required': id.includes('Phone')?'Enter valid phone': id.includes('Pass') && id!=='regConfirmError'?'Min 6 chars':'Passwords must match'; ok=false; } else el.textContent='';
+			});
+			const agreeErr=document.getElementById('agreeError');
+			if(agreeErr) agreeErr.textContent='';
+			if(!agree.checked){ if(agreeErr) agreeErr.textContent='You must agree to Terms & Privacy'; ok=false; }
+			if(!ok) return;
+			btn.textContent='Creating...'; btn.disabled=true;
+			setTimeout(()=>{
+				localStorage.setItem('krides_user', JSON.stringify({name:name.value, email:email.value}));
+				btn.textContent='Account created!';
+				btn.style.background='#28a745';
+				setTimeout(()=> window.location.href='login.html', 900);
+			}, 900);
+		});
+	})();
+	</script>
+</body>
+</html>
