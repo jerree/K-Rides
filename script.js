@@ -1,3 +1,29 @@
+/* =========================================================
+   PRELOADER - HIDE AFTER LOAD
+   ========================================================= */
+window.addEventListener('load', ()=>{
+  const pre = document.getElementById('preloader');
+  if(!pre) return;
+  // mad effect: keep at least 2.5s so animation shows
+  const min = 2500;
+  const start = performance.now();
+  const hide = ()=>{
+    const elapsed = performance.now() - start;
+    const wait = Math.max(0, min - elapsed);
+    setTimeout(()=> pre.classList.add('hide'), wait);
+  };
+  // if images already cached, hide after min
+  if(document.readyState === 'complete') hide();
+  else setTimeout(hide, 300);
+});
+/* also hide if user already visited (no flash) */
+document.addEventListener('DOMContentLoaded', ()=>{
+  setTimeout(()=>{
+    const pre=document.getElementById('preloader');
+    if(pre && !pre.classList.contains('hide') && performance.now()>2500) pre.classList.add('hide');
+  }, 2600);
+});
+
 /* ===========================
    NAVBAR INDICATOR
 =========================== */
