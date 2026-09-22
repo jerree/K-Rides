@@ -1,28 +1,53 @@
 /* =========================================================
-   PRELOADER - HIDE AFTER LOAD
+   PRELOADER - SHOW ONLY ON FIRST LOAD / RELOAD, NOT ON NAV
    ========================================================= */
-window.addEventListener('load', ()=>{
-  const pre = document.getElementById('preloader');
-  if(!pre) return;
-  // mad effect: keep at least 2.5s so animation shows
-  const min = 2500;
-  const start = performance.now();
-  const hide = ()=>{
-    const elapsed = performance.now() - start;
-    const wait = Math.max(0, min - elapsed);
-    setTimeout(()=> pre.classList.add('hide'), wait);
-  };
-  // if images already cached, hide after min
-  if(document.readyState === 'complete') hide();
-  else setTimeout(hide, 300);
-});
-/* also hide if user already visited (no flash) */
-document.addEventListener('DOMContentLoaded', ()=>{
-  setTimeout(()=>{
-    const pre=document.getElementById('preloader');
-    if(pre && !pre.classList.contains('hide') && performance.now()>2500) pre.classList.add('hide');
-  }, 2600);
-});
+(function(){
+  function shouldSkip(){
+    try{
+      const navType = performance.getEntriesByType('navigation')[0]?.type
+        || (performance.navigation && performance.navigation.type === 1 ? 'reload' : 'navigate');
+      const done = sessionStorage.getItem('krides_preloader_done');
+      if (done && navType !== 'reload') return true;
+    }catch(e){}
+    return false;
+  }
+  function markDone(){ try{ sessionStorage.setItem('krides_preloader_done','1'); }catch(e){} }
+
+  // if navigating Home<->Cars, hide immediately
+  if (shouldSkip()){
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const pre=document.getElementById('preloader');
+      if(pre){ pre.classList.add('hide'); }
+    });
+    // also on load ensure hidden
+    window.addEventListener('load', ()=>{
+      const pre=document.getElementById('preloader');
+      if(pre) pre.classList.add('hide');
+    });
+    return;
+  }
+
+  markDone();
+  window.addEventListener('load', ()=>{
+    const pre = document.getElementById('preloader');
+    if(!pre) return;
+    const min = 2500;
+    const start = performance.now();
+    const hide = ()=>{
+      const elapsed = performance.now() - start;
+      const wait = Math.max(0, min - elapsed);
+      setTimeout(()=> pre.classList.add('hide'), wait);
+    };
+    if(document.readyState === 'complete') hide();
+    else setTimeout(hide, 300);
+  });
+  document.addEventListener('DOMContentLoaded', ()=>{
+    setTimeout(()=>{
+      const pre=document.getElementById('preloader');
+      if(pre && !pre.classList.contains('hide') && performance.now()>2500) pre.classList.add('hide');
+    }, 2600);
+  });
+})();
 
 /* ===========================
    NAVBAR INDICATOR
@@ -98,6 +123,49 @@ window.addEventListener("resize", () => {
     if (currentActive) moveIndicator(currentActive);
 });
 
+
+/* ===========================
+   HERO SLIDESHOW - 2 IMAGES
+=========================== */
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const hero = document.querySelector('.hero');
+  if (!slides.length || slides.length < 2) return;
+  let idx = 0;
+  let timer = null;
+  const INTERVAL = 5000;
+
+  function go(n){
+    idx = (n + slides.length) % slides.length;
+    slides.forEach((s,i)=> s.classList.toggle('active', i===idx));
+    dots.forEach((d,i)=>{
+      const on = i===idx;
+      d.classList.toggle('active', on);
+      d.setAttribute('aria-selected', String(on));
+    });
+  }
+  function next(){ go(idx+1); }
+  function start(){
+    stop();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    timer = setInterval(next, INTERVAL);
+  }
+  function stop(){ if(timer) clearInterval(timer); timer=null; }
+
+  dots.forEach(d=>{
+    d.addEventListener('click', ()=>{
+      go(Number(d.dataset.slide));
+      start();
+    });
+  });
+
+  document.addEventListener('visibilitychange', ()=>{
+    if(document.hidden) stop(); else start();
+  });
+
+  start();
+})();
 
 /* ===========================
    HEADER TRANSPARENT ON SCROLL
@@ -349,6 +417,20 @@ if (hamburger && navDrawer) {
 /* ===========================
    IMAGE FALLBACK
 =========================== */
+/* ===========================
+   FEATURED WISHLIST TOGGLE
+=========================== */
+document.querySelectorAll('.featured-wishlist').forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    btn.classList.toggle('active');
+    const icon = btn.querySelector('i');
+    if (!icon) return;
+    const isActive = btn.classList.contains('active');
+    icon.className = isActive ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
+  });
+});
+
 document.addEventListener("error", (e) => {
     if (e.target.tagName === "IMG") {
         e.target.style.background = "#E5E7EB";

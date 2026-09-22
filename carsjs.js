@@ -1,3 +1,6 @@
+/* PRELOADER FLAG - ensure Home preloader doesn't show on nav from Cars */
+try{ sessionStorage.setItem('krides_preloader_done','1'); }catch(e){}
+
 /* ===========================
     SORT CARS
 =========================== */
@@ -592,7 +595,47 @@ if (hamburger && navDrawer) {
 })();
 
 /* ===========================
-   IMAGE FALLBACK
+   MOVE WISHLIST BESIDE VIEW DETAILS (match featured)
+=========================== */
+(function(){
+  function setupCarActions(){
+    document.querySelectorAll('.cars-car-grid .car-card').forEach(card=>{
+      const details = card.querySelector('.card-details');
+      const wish = card.querySelector('.wishlist-btn');
+      if (!details || !wish) return;
+      // already wrapped?
+      if (wish.parentElement && wish.parentElement.classList.contains('car-actions')) return;
+      let actions = card.querySelector('.car-actions');
+      if (!actions) {
+        actions = document.createElement('div');
+        actions.className = 'car-actions';
+        details.parentNode.insertBefore(actions, details);
+        actions.appendChild(details);
+      }
+      actions.appendChild(wish);
+      // toggle
+      if (!wish.dataset.bound) {
+        wish.dataset.bound = "1";
+        wish.addEventListener('click', (e)=>{
+          e.preventDefault();
+          wish.classList.toggle('active');
+          const ic = wish.querySelector('i');
+          if (ic) ic.className = wish.classList.contains('active') ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
+        });
+      }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupCarActions);
+  else setupCarActions();
+  // re-run after filter/sort re-appends
+  const origDisplay = window.displayCars;
+  if (typeof origDisplay === 'function') {
+    window.displayCars = function(){ origDisplay(); setupCarActions(); };
+  }
+})();
+
+/* ===========================
+    IMAGE FALLBACK
 =========================== */
 document.addEventListener("error", (e) => {
     if (e.target.tagName === "IMG") {

@@ -20,7 +20,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-	<link rel="stylesheet" href="style.css?v=32">
+	<link rel="stylesheet" href="style.css?v=46">
+	<script>try{var t=(performance.getEntriesByType('navigation')[0]||{}).type||(performance.navigation&&performance.navigation.type===1?'reload':'navigate');if(sessionStorage.getItem('krides_preloader_done')&&t!=='reload')document.documentElement.classList.add('skip-preloader');}catch(e){}</script>
+	<style>.skip-preloader #preloader{display:none!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;}</style>
 </head>
 <body>
 	<!-- =========================================================
@@ -79,6 +81,10 @@
      HERO SECTION
      ========================================================= -->
 <section class="hero" id="home">
+    	<div class="hero-slideshow" aria-hidden="true">
+    		<div class="hero-slide active" style="background-image: url('assets/kride-opt.webp')"></div>
+    		<div class="hero-slide" style="background-image: url('assets/hero-2.webp')"></div>
+    	</div>
     	<div class="overlay"></div>
     	<div class="container">
 			<div class="hero-text">
@@ -91,6 +97,10 @@
 					Browse Inventory
 				</a>
 			</div>
+    	</div>
+    	<div class="hero-dots" role="tablist" aria-label="Hero slideshow">
+    		<button class="hero-dot active" data-slide="0" aria-label="Slide 1" role="tab" aria-selected="true"></button>
+    		<button class="hero-dot" data-slide="1" aria-label="Slide 2" role="tab" aria-selected="false"></button>
     	</div>
 	</section>
 
@@ -107,67 +117,85 @@
 			</div>
 
 			<div class="car-grid">
-				<div class="car-card"
+				<div class="car-card featured-card"
 					data-brand="Mercedes"
 					data-model="Mercedes C-Class"
 					data-price="27000000"
 					data-fuel="Petrol"
 					data-transmission="Automatic"
-					data-year="2020"
+					data-year="2018"
+					data-km="42000"
 					data-rating="4.8"
 					data-description="Luxury sedan with leather seats, premium sound, advanced safety, and a powerful engine.">
-					<img src="assets/mercedes.webp" alt="Mercedes C-Class" loading="lazy">
+					<div class="car-image-wrap">
+						<img src="assets/mercedes.webp" alt="Mercedes C-Class" loading="lazy">
+						<span class="car-badge">2018 · Automatic</span>
+					</div>
 					<div class="car-info">
 						<h3>Mercedes C-Class</h3>
-						<p>₦27,000,000</p>
-						<a href="#" class="btn btn-primary card-details">
-							View Details
-						</a>
+						<p class="car-meta">42,000 km · Petrol</p>
+						<p class="car-price">₦27,000,000</p>
+						<div class="car-actions">
+							<a href="#" class="btn card-details">View details</a>
+							<button class="wishlist-btn featured-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+						</div>
 					</div>
 				</div>
 
-				<div class="car-card"
+				<div class="car-card featured-card"
 					data-brand="Honda"
-					data-model="Honda Civic"
+					data-model="Honda Civic Type R"
 					data-price="22500000"
 					data-fuel="Petrol"
-					data-transmission="Automatic"
-					data-year="2023"
+					data-transmission="Manual"
+					data-year="2019"
+					data-km="31500"
 					data-rating="4.8"
 					data-description="Reliable and efficient sedan with modern tech, smooth handling, and excellent fuel economy.">
-					<img src="assets/Honda.webp" alt="Honda Civic" loading="lazy">
+					<div class="car-image-wrap">
+						<img src="assets/Honda.webp" alt="Honda Civic Type R" loading="lazy">
+						<span class="car-badge">2019 · Manual</span>
+					</div>
 					<div class="car-info">
-						<h3>Honda Civic</h3>
-						<p>₦22,500,000</p>
-						<a href="#" class="btn btn-primary card-details">
-							View Details
-						</a>
+						<h3>Honda Civic Type R</h3>
+						<p class="car-meta">31,500 km · Petrol</p>
+						<p class="car-price">₦22,500,000</p>
+						<div class="car-actions">
+							<a href="#" class="btn card-details">View details</a>
+							<button class="wishlist-btn featured-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+						</div>
 					</div>
 				</div>
 
-				<div class="car-card"
+				<div class="car-card featured-card"
 					data-brand="BMW"
-					data-model="BMW 5Series"
+					data-model="BMW 5 Series"
 					data-price="22000000"
 					data-fuel="Petrol"
 					data-transmission="Automatic"
-					data-year="2019"
+					data-year="2020"
+					data-km="28900"
 					data-rating="4.8"
 					data-description="Executive sedan blending performance and luxury with advanced driving dynamics and premium comfort.">
-					<img src="assets/Bmw.webp" alt="BMW 5Series" loading="lazy">
+					<div class="car-image-wrap">
+						<img src="assets/Bmw.webp" alt="BMW 5 Series" loading="lazy">
+						<span class="car-badge">2020 · Automatic</span>
+					</div>
 					<div class="car-info">
-						<h3>BMW 5Series</h3>
-						<p>₦22,000,000</p>
-						<a href="#" class="btn btn-primary card-details">
-							View Details
-						</a>
+						<h3>BMW 5 Series</h3>
+						<p class="car-meta">28,900 km · Petrol</p>
+						<p class="car-price">₦22,000,000</p>
+						<div class="car-actions">
+							<a href="#" class="btn card-details">View details</a>
+							<button class="wishlist-btn featured-wishlist" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+						</div>
 					</div>
 				</div>
 			</div>
 			
 			<div class="view-all">
-				<a href="cars.html" class="btn btn-primary">
-					View All Cars
+				<a href="cars.html" class="btn btn-view-all">
+					View all cars <i class="fa-solid fa-arrow-right"></i>
 				</a>
 			</div>
 
